@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Title</title>
+</head>
+<body>
+<h1 th:text="${titulo}" th:if="${not titulo.isEmpty()}"></h1>
+
+<table th:if="${usuarios.size()>0}">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="usuario: ${usuarios}">
+        <td th:text="${usuario.nombre}"></td>
+        <td th:text="${usuario.apellido}"></td>
+        <td th:text="${usuario.email}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div th:if="${usuarios.size() < 1}">
+    No hay usuarios registrados en el sistema!!!
+</div>
+
+<div th:if="${usuarios.isEmpty()}">
+    No hay usuarios registrados en el sistema!!! pero con isEmpty
+</div>
+
+</body>
+</html>
