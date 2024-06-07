@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--Atributo propio de thymelief-->
+<head>
+  <meta charset="UTF-8">
+  <title>Recibir parametros por http get </title>
+</head>
+
+<body>
+<h1>Recibir parametros por http get </h1>
+<div th:text="${resultado}"></div>
+<div th:if="${!resultado.isEmpty()}">No se envion ningun texto</div>
+</body>
+</html>
