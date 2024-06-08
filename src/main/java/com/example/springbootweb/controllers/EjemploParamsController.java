@@ -27,6 +27,15 @@ public class EjemploParamsController {
         return "params/ver";
     }
 
+    @GetMapping("/mix-params")
+    public String param(
+            @RequestParam(name = "texto",required = false) String texto,
+            @RequestParam(name = "numero",required = false) Integer numero,
+            Model model){
+        model.addAttribute("resultado","El text es "+texto + " y el numero es: " + numero);
+        return "params/ver";
+    }
+
     @GetMapping("/enviarUsuario")
     public ResponseEntity<?> LeerNombre(
             @RequestParam(name = "nombre") String nombre
