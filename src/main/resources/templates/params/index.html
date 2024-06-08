@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--Atributo propio de thymelief-->
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar parametros del request http get url </title>
+</head>
+
+<body>
+<ul>
+    <li>
+        <a th:href="@{/params/String(texto='Hola Xavier')}">/params/string?texto=Hola Xavier</a>
+    </li>
+    <li>
+        <a th:href="@{/params/String(texto='Que tal Xavier')}">/params/string?texto=Que tal Xavier</a>
+    </li>
+</ul>
+</body>
+</html>

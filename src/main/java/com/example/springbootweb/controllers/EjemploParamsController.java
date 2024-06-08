@@ -1,15 +1,23 @@
 package com.example.springbootweb.controllers;
 
 import org.apache.coyote.Request;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.swing.text.html.parser.Entity;
+
 @Controller
 @RequestMapping("/params")
 public class EjemploParamsController {
+
+    @GetMapping("/")
+    public String index() {
+        return "params/index";
+    }
 
     @GetMapping("/String")
     public String param(
@@ -20,9 +28,9 @@ public class EjemploParamsController {
     }
 
     @GetMapping("/enviarUsuario")
-    public String LeerNombre(
+    public ResponseEntity<?> LeerNombre(
             @RequestParam(name = "nombre") String nombre
     ){
-        return "Bienvenido " + nombre;
+        return ResponseEntity.ok("Bienvenido " + nombre + " a tu web");
     }
 }
