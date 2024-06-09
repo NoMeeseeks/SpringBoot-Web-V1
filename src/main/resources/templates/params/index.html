@@ -7,12 +7,19 @@
 </head>
 
 <body>
+<h2>Rutas</h2>
 <ul>
     <li>
-        <a th:href="@{/params/String(texto='Hola Xavier')}">/params/string?texto=Hola Xavier</a>
+        <a th:href="@{/params/String(texto='Hola Xavier')}">String</a>
     </li>
     <li>
-        <a th:href="@{/params/String(texto='Que tal Xavier')}">/params/string?texto=Que tal Xavier</a>
+        <a th:href="@{/params/String(texto='Que tal Xavier')}">String</a>
+    </li>
+    <li>
+        <a th:href="@{/params/mix-params(saludo='Como estas Xavier', numero = 7)}">mix-params</a>
+    </li>
+    <li>
+        <a th:href="@{/params/mix-params-request(saludo='Como estas Xavier', numero = 7)}">mix-params-request</a>
     </li>
 </ul>
 </body>
