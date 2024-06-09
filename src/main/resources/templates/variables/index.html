@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--Atributo propio de thymelief-->
+<head>
+  <meta charset="UTF-8">
+  <title>Enviar parametros de la ruta http get url </title>
+</head>
+
+<body>
+<h2 style="font-size: large">Rutas</h2>
+<ul>
+  <li>
+    <a th:href="@{/variables/string/} + 'Hola Xavier'">/variables/string/</a>
+  </li>
+  <li>
+    <a th:href="@{/variables/string/} + 'Que tal Jhon'">/variables/string/</a>
+  </li>
+  <li>
+    <a th:href="@{/variables/string/} + 'Que tal Jhon' + '/' + 10 ">/variables/string/</a>
+  </li>
+  <li>
+    <a th:href="@{/variables/string/} + 'Que tal Jhon' + '/' + 10 ">/variables/string/</a>
+  </li>
+</ul>
+</body>
+</html>
