@@ -16,7 +16,7 @@ import java.util.List;
 public class IndexController {
 
     // el controlador se encarga de controlar las peticiones del usuario
-    @GetMapping(path = "/home")
+    @GetMapping(path = "")
     public String index(Model model) {
         // Con el Model model se puede enviar datos por medio de llave valor a la vista en este caso es el attribute con dos argumentos
         // tiene la misma funcion
