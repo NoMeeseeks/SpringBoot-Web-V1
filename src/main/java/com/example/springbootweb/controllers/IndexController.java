@@ -1,6 +1,7 @@
 package com.example.springbootweb.controllers;
 
 import com.example.springbootweb.model.Usuario;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,17 @@ import java.util.List;
 @RequestMapping("/app")//como mapear el controlador con request mapping agregando una ruta base a todos los metodos
 public class IndexController {
 
+    @Value("${texto.indexcontroller.index.titulo}")
+    private String textoIndex;
+
+    @Value("${texto.indexcontroller.perfil.titulo}")
+    private String textoPerfil;
+
+    @Value("${texto.indexcontroller.listar.titulo:}")
+    private String textoListar;
+
     // el controlador se encarga de controlar las peticiones del usuario
-    @GetMapping(path = "")
+    @GetMapping(path = {"","/","home","index"})
     public String index(Model model) {
         // Con el Model model se puede enviar datos por medio de llave valor a la vista en este caso es el attribute con dos argumentos
         // tiene la misma funcion
@@ -26,7 +36,7 @@ public class IndexController {
 
         //ModelAndView con el metodo es addObject para agregar los datos y le podemos asignar el normbre de la vista a cargar con set viewname
 
-        model.addAttribute("titulo","SpringWeb");
+        model.addAttribute("titulo",textoIndex);
 
         return "index";
     }
