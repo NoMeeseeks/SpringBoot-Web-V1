@@ -3,13 +3,14 @@
 <!--Atributo propio de thymelief-->
 <head>
     <meta charset="UTF-8">
-    <title th:text="${titulo}"></title>
+    <title>Spring</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 
 <body>
-    <h1 class="color-rojo">Spring boot web</h1>
-    <h2 class="color-blue">Uso de Thymeleaf</h2>
+    <h1 class="color-negro" th:text="${titulo}"></h1>
+    <h2 class="color-rojo">Spring boot web</h2>
+    <h3 class="color-blue">Uso de Thymeleaf</h3>
 
     <img th:src="@{/img/FotoCapitan.jpeg}" class="perfil"></img>
 

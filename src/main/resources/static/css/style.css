@@ -1,9 +1,14 @@
-h1.color-rojo{
+h1.color-negro{
+    color: black;
+    text-align: center;
+    font-size: xxx-large;
+}
+h2.color-rojo{
     color: red;
     text-align: center;
     font-size: xxx-large;
 }
-h2.color-blue{
+h3.color-blue{
     color: blue;
     text-align: center;
     font-size: medium;
